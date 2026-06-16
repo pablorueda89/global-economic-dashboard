@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment
+.env
+.env.local
+*.env
+
+# Base de datos (generada por el pipeline)
+data/*.db
+data/*.sqlite
+
+# Node / React
+node_modules/
+frontend/node_modules/
+frontend/.env
+frontend/.env.local
+frontend/build/
+frontend/dist/
+.next/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
