@@ -7,7 +7,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(me
 logger = logging.getLogger(__name__)
 
 
-def fetch_indicator(indicator_code: str, country_code: str) -> list[dict]:
+def fetch_indicator(indicator_code: str, country_code: str):
     """Fetch all pages for a given indicator and country from the World Bank API."""
     url = (
         f"{WORLD_BANK_BASE_URL}/country/{country_code}/indicator/{indicator_code}"
@@ -49,7 +49,7 @@ def fetch_indicator(indicator_code: str, country_code: str) -> list[dict]:
     return records
 
 
-def extract_all() -> list[dict]:
+def extract_all():
     """Extract all indicators for all G20 countries."""
     all_records = []
     total = len(INDICATORS) * len(G20_COUNTRIES)

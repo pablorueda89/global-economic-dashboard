@@ -1,3 +1,4 @@
+from __future__ import annotations
 import pandas as pd
 import logging
 from config import INDICATORS, START_YEAR, END_YEAR
