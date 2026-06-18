@@ -10,7 +10,7 @@ const PALETTE = [
 
 const DEFAULT_COUNTRIES = ['United States', 'Germany', 'Brazil', 'China', 'Japan']
 
-export default function InflationChart({ byCountryYear, countries, years }) {
+export default function InflationChart({ byCountryYear, countries, years, highlightYear }) {
   const [selected, setSelected] = useState(DEFAULT_COUNTRIES)
 
   const toggle = (c) =>
@@ -59,6 +59,10 @@ export default function InflationChart({ byCountryYear, countries, years }) {
           <XAxis dataKey="year" tick={{ fill: '#6b7280', fontSize: 11 }} axisLine={false} tickLine={false} />
           <YAxis tick={{ fill: '#6b7280', fontSize: 11 }} axisLine={false} tickLine={false} tickFormatter={(v) => `${v}%`} />
           <ReferenceLine y={0} stroke="#374151" strokeDasharray="4 4" />
+          {highlightYear && (
+            <ReferenceLine x={highlightYear} stroke="#3b82f6" strokeDasharray="4 4" strokeWidth={1.5}
+              label={{ value: highlightYear, position: 'top', fill: '#3b82f6', fontSize: 10 }} />
+          )}
           <Tooltip
             contentStyle={{ background: '#111827', border: '1px solid #374151', borderRadius: 8 }}
             labelStyle={{ color: '#f9fafb', fontWeight: 600 }}
