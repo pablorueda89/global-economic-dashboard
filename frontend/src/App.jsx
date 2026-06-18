@@ -40,7 +40,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div>
             <h1 className="text-xl font-bold text-white tracking-tight">
-              🌐 Global Economic Health Dashboard
+              🌐 Global Economic Health Dashboard v2
             </h1>
             <p className="text-xs text-gray-500 mt-0.5">
               G20 Macroeconomic Indicators · World Bank Open Data
